@@ -1,0 +1,315 @@
+fluctuations of 2d membranes
+
+crystalline/polymerised membranes - individual monomers are rigidly bound
+phase diagram has dependence on self avoidance and anisotropy
+results got from the RG ε expansion
+
+role of topological defects. liberation leads to the hexatic and fluid 
+universality classes
+
+statmech of polymers: essentially ensembles of various classes of random walks 
+                      in some d dimensional bulk or embedding space
+
+planar 2d monolayers: KTHNY theory of defect mediated melting of monolayers with 
+                      2 distinct continuous phase transitions, separating 
+                      an intermediate hexatic phase - with quasi long range bond 
+                                                      orientational order. from 
+                                                      both a low T crystalline 
+                                                      phase and a high T fluid 
+                                                      phase
+
+full fledged membranes are subject to shape fluctuations
+
+macro behaviour det by interplay between microscopic order and the entropy of 
+shape and elastic deformations
+
+distinct types of microscopic order: crystalline, hexatic, fluid. leads to 
+                                     distinct long wavelength behaviour and rich 
+                                     set of universality classes
+
+crystalline membranes = tethered / polymerised membranes. generalisations of 
+linear polymer chains 
+- have in plane elastic moduli and bending rigidity
+- broken translational invariance in the plane
+- fixed connectitivity from strong bonding
+
+fluid membranes
+- vanishing shear modulus 
+- dynamical connectivity
+- significant shape fluctuations controleld by an effective bending rigidity 
+  parameter
+- examples: amphiphilic systems
+  - lipid molecules, have polar or ionic head groups (hydrophilic) and 
+    hydrocarbon tails (hydrophobic)
+  - these syms self assemble into a bewildering array of ordered structures: 
+    monolayers, planar, and spherical bilayers, lamellar, hexagonal, and 
+    bicontinuous phases
+
+to completely understand these biological membranes you need to understand its 
+fluid and crystalline components, and the challenging problem of the coupled 
+system with thermal fluctuations, self avoidance, anisotropy, and disorder
+- full system is beyond the scope of analytic and numerical methods currently
+
+other egs of fluid membranes
+- surface tension between two immiscible substances
+  - lowered by the surface action of amphiiphiles
+  - for some range of amphiphile concentration both phases can span the system 
+    which leads to bicontinuous complex fluid, MICROEMULSION
+  - oil water interface of a microemulsion is an unruly fluid surface
+
+RENORMALISATION GROUP
+################################################################################
+
+RG shows that large distance (low p limit) props of different models are 
+governed by the props of the corresponding Fixed Point (FP)
+- so you can compute observables in many models, such as a molecular dynamics 
+  sim or continuum landau pheno approach, and get the same long wavelength 
+  result
+
+main idea: encode the effects of the short distance DOFs in redefined couplings
+
+practical way to implement: the RG Transformation (RGT)
+- gives an explicit way to integrate out all the high p (small dist) modes of 
+  the theory
+- this approach is general and simple but problem, proliferation of # of 
+  operators generated along the RG flow
+- there are techniques to control this expansion, the ε expansion
+- can perform the ε expansion via a field theoretical approach
+  - use feynman diagrams and dimensional regularisation within a minimal 
+    subtraction scheme
+  - this is abstract but computationally simpler
+
+generally, describe model by several fields φ, χ, and construct the landau free 
+energy by including all terms compatible with the symmetries and introducing new 
+couplings for each term
+- consider the L free energy in arbitrary dimension d
+- then find a gaussian FP, infrared stable above a critical dimension d_U
+- below d_U there are one or more couplings that define relevant directions
+- then compute all physical quantities as a fn of ε = d_U - d, ie as 
+  perturbations of the gaussian theory
+
+field theory approach
+- introduce a renormalisation constant for each field, Z_φ, Z_χ... 
+- and a renorm constant Z_u Z_v for each relevant direction below d_U
+- if the model has symmetries there are some relations among obbls (ward 
+  identities) and some of the renorm constants might be related
+- within dimensional regularization the infinities of the feynman diagrams 
+  appeaar as poles in ε, which encode the short dist details of the model
+- use the new constants Z's to absorb the poles in ε, producing a complete set 
+  of finite green's functions
+- then we've succeeeded in carrying out the RG program of including the 
+  appropriate short dist info in redefined couplings and fields
+- the prescription of absorbing only the poles in ε is the minimal subtraction 
+  scheme (MS). makes calculations simpler
+
+β functions control the running of the coupling
+
+the existence of a FP @ which pt couplings cease to flow requires β = 0
+
+CRYSTALLINE MEMBRANES
+################################################################################
+
+is a 2d fish net structure with bonds (links) that never break. 
+- connectivity of monomers (nodes) is fixed
+
+to keep it general: consider D-dim objects embedded in d-dim space
+
+objects described by d-dim vector ↗r(↗x)
+- ↗x the D-dim internal coordinates
+- case d = 3, D = 2 corresponds to the physical crystalline membrane
+
+to construct the landau free energy
+- recall the free energy must be invariant under global translations
+- so the order param is given by derivatives of the embedding ↗r, 
+- ↗t_𝛼 = ∂↗r / ∂u_𝛼 with 𝛼 = 1..D
+- this condition, along with invariance under rotations, gives landau free 
+  energy
+
+  F(↗r) = (eq.5)
+
+  - higher order terms irrelevant at long wavelength
+
+physics depends on 5 parameters
+- κ, bending rigidity. coupling to the extrinsic curvature
+  - reparametrisation invariance is broken for crystalline membranes, so can 
+    replace this term by its long wavelength limit
+  - for large and positive bending rigidities, flatter surfaces are favoured
+- t,u,v elastic constants. 
+  - encode the microscopic elastic props of the membrane. 
+  - in a flat phase, related to the lame coeffs of landau elastic theory
+- b, excluded volume or self-avoidance coupling. 
+  - imposes energy penalty for the membrane to self intersect
+  - if b = 0 (no self avoidance), crsps to a phantom model
+
+expand ↗r(↗x) as ↗r(↗x) = (ζ↗x + ↗u(↗x), h(↗x))
+- ↗u the D-dim phonon in plane modes
+- h the d - D out of plane fluctuations
+- if ζ = 0 the model is in a rotationally invariant crumpled phase where 
+  surfaces have fractal dimension, and there is no distinction between the in 
+  plane phonons and out of plane modes
+
+PHANTOM CASE
+################################################################################
+
+set b = 0 in the free energy
+
+mean field effective potential (use the decomp of the expansion of r) becomes
+V(ζ) D ζ^2 (t / 2 + U + v D) ζ^2)
+
+with sols ζ^2 = 0, t >= -, and ζ^2 = -t/4(u + vd), t < 0
+- flat phase for t < 0
+- crumpled for t > 0
+- crumpling transition at t = 0
+
+crumpled phase
+- large distance props of this phase described by simple gaussian FPs
+- the conencted green's fn can be calculated exactly 
+- square of radius of gyration scales logarithmically with the membrane size L, 
+  in agreement with numerical sims of tethered membranes in the crumpled phase
+
+(read papers)
+
+crumpling transition
+- model amenable to an ε expansion with ε = 4 - D
+- set of β fns don't have an FP except for d > 219
+- suggests the crumpling transition is 1st order for d = 3
+
+there are other estimates with results that show the crumpling transition is 
+continuous
+- limit of large elastic constants
+  - approach the transition from the flat phase, limit of infinite elastic 
+    constants
+  - can compute the β fn with a large d expansion, gives a continuous crumpling 
+    transition with size exponent at the transion d = 1 - 1/d
+- SCSA approximation
+  - schwinger dyson equations for the model truncated to include up to four 
+    point vertices
+  - hauserdorff dim d_H = 2.73, size exponent nu = .732
+- MCRG calculation (monte carlo renormalisation group)
+  - transition is continuous with exponents d_H = 2.64 and nu = 0.85
+
+each of these three indep estimates give a continuous crumpling transition with 
+size exponent in the range nu ~ 0.7 pm .15
+
+- would be interesting to understand how the ε expansion must be performed to 
+  reconcile it with these results
+
+more evidence of the crumpling transition being continuous
+- given by numerical sims
+- looking at obbls like specific heat or radius of gyration give textbook 
+  continuous phase transitions
+- but precise vale of the exponents at the transition are hard to pin down
+- this model has been studied numerically with diff discretisations on several 
+  lattices, so ilya clear evidence for universality of the crumpling transition
+
+flat phase
+- consider the strain tensor
+- the free energy becomes...
+- ilya the standard L free energy from elasticity theory with lame coeffs μ and 
+  λ
+- and an extrinsic curvature term with bending rigidity κ
+- the large dist props of the flat phase for crystalline membranes are described 
+  completely by the free engy (eq. 20)
+- bending rigidity can be scaled out at the crumpling transition and the F 
+  energy bcomes a fn of u / κ^2 and λ / κ^2
+- can get the β fn for the couplings with an ε expansion
+- results are
+  - β_μ = ...
+  - β_λ = ...
+
+- the beta fns show four fixed points
+- phase diagram of the flat phase is more involved than the one got from RG. 
+  there are three FPS in addn to the FLFP introduced
+- the additional FPs are infrared unstable so can be ignored
+
+
+phantom case: 
+- ignore self avoidance
+- sets b = 0 in the free energy, 
+- mean field solution
+- mean field effective potential predicts a flat phase and crumpled phase separated by a crumpling transition at t = 0
+- there are various numerical simulations of tethered membranes in the crumpled phase 
+- crumpling transition: 
+- the β functions don't have a fixed point, except for d > 219, suggesting the crumpling transition is first order for d = 3
+- numerical simulations using SCSA and MCRG predict hausdorff dimensino d_H correctly and size exponent in correct range
+  - they give clear evidence for universality of the phase transition
+- β functions for the flat phase can be calculated. show four fixed points. 
+
+
+considering a
+2d crystalline membrane embedded in 3d space
+ 
+membrane is a flat 2d object up to fluctuations in the perpendicular direction.
+
+there are two key correlators, involving the in-plane and out-of-plane phonon 
+modes. 
+
+flat phase: physics governed by a stable fixed point
+
+numerical simulations using meshes have the most accurate results. give values for the critical exponents η = 0.75
+
+SCSA is most accurate analytical. gives η = 0.821
+
+large d expansion: gives η = 2/3
+
+another critical regime of a flat membrane got by subjecting the membrane to external tension: 56, 57. buckled membrane where the equilibrium shape is not planar
+
+SELF AVOIDANCE
+
+- introduced as a delta function repulsion
+
+flat phase
+- in the flat phase, self intersections are unlikely so self-avoidance is irrelevant
+- self-avoiding term for the flat phase gives a trivial contribution
+- supported by numerical sims. self intersecitons are rare
+- there isn't a rigorous analytic proof of this statement tho
+- flory approximation for self avoiding membranes predicts a fractal dimension d_H = 2.5
+
+crumpled phase
+- add the self avoiding interaction to the free energy (generalisation for edwards' model for polymers)
+- it is possible to perform an ε expansion
+- main does calculation of β function at lowest order in ε using MOPE formalism (62, 63)
+- shows the fixed point of the crumpled phase is unstable in the presence of self avoidance
+- ∴ flat phase of self avoiding membrane is same as flat phase of phantom
+  but crumpled phase of membranes destabilised by presence of SA
+- ε expansion gives a sysmetatic determination for crit exponents. 
+- ε expansion done to first order, huge task to do to 2nd order, some evidence suggesting if done to all orders could give a flat phase at nu = 1
+- gaussian approximation
+
+numerical simulations v important control for membranes with SA included.
+- network of N particles in triangular mesh, nearest neighbour potential, SA modeled as repulsive hard sphere potential, acting between any two atoms in the membrane
+- first estimate of size exponent at d = 3 compatible with the flory estimate
+- but with bigger lattices show the d = 3 membrane is actually flat
+- issues: lots of evidence showing the flatness is an intrinsic consequence of self avoidance
+- difficult to find a crumpled phase with repulsive potential for d = 3
+- basically: there is a lot of evidence that there's a lack of crumpled phase for self avoiding crystalline membranes - studies 81-87
+
+could allow for attractive potentials. compact SA phase was found with fractal dimension close to 3
+- with VdW potential, the membrane undergoes sequence of folding transitions leading to a crumpled phase - 88
+
+- study of tether with attractive potential remains an open question. understanding of the nature of compact phases produced by attractive interactions
+
+conclusion of SA FP:
+- we don't have complete understanding of the overall scenario
+- analytic tools don't give a clear picture
+- numerical sols give the bets insight
+- for the physical case d = 3 the most plausible situation
+  - there's no crumpled phase and the flat phase is identical to the flat phase of the phantom model
+- numerical evidence: conjecture that SAFP is the same as FLFP and the crumpled SA phase is absent when you have purely repulsive potentials
+
+anisotropic phantom: 
+- crumpled phase, tubular phase, flat phase
+- ginsburg criterion applied to model says the phase diagram should be stable for membranes D = 2 at any embedding dimension d
+- so the MF description should give the right qualitative picture for the full model
+- numerical sims confirm the result
+
+open problem: how to generalize the RG equations of KTHNY theory to the case of fluctuating geometry
+- assume validity of KTNHY scenario
+- describe models of hexatic membranes and fluid membranes
+
+in the flat phase, the coupling of in plane stretching modes and out of plane fluctuation modes (undulation) leads to renormalizing the bending rigidity and the compression and shear modilu. 
+η = roughness of membrane, average amplitude of out of plane fluctuations
+
+or maybe: can we demonstrate existence of a crumpled phase for polymerized self avoiding membranes with attractive interactions?
+
+what is the dependence of the stability of a crumpled phase on the range and strength of the attractive interaction?

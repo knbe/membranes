@@ -1,0 +1,39 @@
+crumpling transition
+- maybe a new way of solving the problem
+
+applications of RG
+- whenever an intermediate asymptotic regime is controlled by an RG fixed
+  point, the dynamics there reflects the local behaviour of the RG
+  transformation
+- the dynamics in the intermediate asymptotic regime is universal
+- physical systems with different equations of motion can be driven to the same
+  fixed point and thus exhibit identical asymptotic behaviour
+- corollary: for these processes you don't have to exactly solve the equations
+  of motion if you're interested in universal behaviour
+- for computational studies you can use a minimal model of the dynamics that's
+  in the same universality class as the system, but computationally more
+  efficient
+- assumption: the behaviour of the system reflects an RG fixed point
+- and the computational scheme you devise is in the same universality class
+- computationally efficient methods with RG considerations used to study phase
+  separation, block copolymers, crystal growth, the kinetics of the
+  superconducting transition
+- algorithms based on rescaling but not exploiting fixed points: applied to
+  study the finite time blow up of solutions like the 3d euler equations, the
+  nonlinear schro eq, and model equations for combustion
+
+questions
+- know any sources/references/where to begin on applications of RG to
+  deformations in solids
+	- goldenfeld makes a note about using RG for constructing
+	  computationally minimal models - not really sure what the scope of
+	  that means, but a few years ago I was interested in computationally
+	  efficient methods for 
+- what are applications of RG in fluid dynamics? what are modern research
+  topics in fluid dynamics?
+
+P3M
+
+time renormalization in the n body problem
+
+computer simulations using particles - hockney, eastwood
