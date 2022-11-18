@@ -1,4 +1,4 @@
-system = npendulum
+system = membrane
 init = n2
 solver = gaussseidel
 integrator = verlet
