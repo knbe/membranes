@@ -3,6 +3,6 @@
 
 #include "manifold.h"
 
-void uniform_gravity (config manifold, vector *force); 
+void uniform_magnetic (config manifold, vector *force); 
 
 #endif

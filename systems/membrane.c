@@ -73,5 +73,5 @@ void resolve_collisions (config manifold)
 
 char *system_name () 
 {
-	return "glider"; 
+	return "membrane"; 
 }
