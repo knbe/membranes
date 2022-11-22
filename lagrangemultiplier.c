@@ -46,6 +46,9 @@ void run_simulation (params simulation, config manifold)
 			manifold.particle[n].position = 
 				manifold.particle[n].newPosition; 
 
+			// manifld.particle[n].position +=
+			//	manifold.particle[n].curl; 
+
 			manifold.particle[n].velocity = 
 				manifold.particle[n].newVelocity;
 		}	
