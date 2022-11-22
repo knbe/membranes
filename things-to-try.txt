@@ -1,3 +1,4 @@
 - finite size scaling
 - invaded cluster algorithm to calculate T_c
 	- newman 4.4.4
+- add longer range interaction terms to the hamiltonian
