@@ -33,7 +33,7 @@ void run_simulation (params simulation, config manifold)
 
 		/* project constraints */
 
-		for (int i = 0; i < 10; i++)
+		for (int i = 0; i < 30; i++)
 		{
 			project_constraints(manifold); 
 		}
