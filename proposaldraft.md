@@ -3,7 +3,9 @@ title: Project Proposal
 author: Kian Abeywick
 ---
 
-_Question:_ can a Monte Carlo Renormalization Group (MCRG) model with position-based constraint handling demonstrate a continuous crumpling transition in a 2D polymerized (crystalline) membrane?
+_Question:_ can a Monte Carlo Renormalization Group (MCRG) model with 
+position-based constraint handling demonstrate a continuous crumpling transition 
+in a 2D polymerized (crystalline) membrane?
 
 In this proposed project I would be addressing the crumpling transition of a 
 polymerized membrane (a set of vertices linked together in a lattice mesh 
